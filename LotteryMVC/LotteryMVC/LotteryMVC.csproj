@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B608EB0F-0661-46B6-A2B4-01BAFD20DFB3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LotteryMVC</RootNamespace>
+    <AssemblyName>LotteryMVC</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44353</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.9</TypeScriptToolsVersion>
+	<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.4.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.4.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.4.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.4.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LotteryController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\LotteryModel.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="demo\css\site.css" />
+    <Content Include="demo\css\siteLogin.css" />
+    <Content Include="demo\code.jquery.com\jquery-3.3.1.min.js" />
+    <Content Include="demo\dist\css\custom.css" />
+    <Content Include="demo\dist\css\theme.css" />
+    <Content Include="demo\dist\css\theme.min.css" />
+    <Content Include="demo\dist\img\down-arrow.svg" />
+    <Content Include="demo\dist\js\theme.js" />
+    <Content Include="demo\dist\js\theme.min.js" />
+    <Content Include="demo\favicon.ico" />
+    <Content Include="demo\favicon.png" />
+    <Content Include="demo\img\auth\login-bg.jpg" />
+    <Content Include="demo\img\auth\register-bg.jpg" />
+    <Content Include="demo\img\big\img2.jpg" />
+    <Content Include="demo\img\big\img3.jpg" />
+    <Content Include="demo\img\big\img4.jpg" />
+    <Content Include="demo\img\big\img5.jpg" />
+    <Content Include="demo\img\big\img6.jpg" />
+    <Content Include="demo\img\credit\american-express.png" />
+    <Content Include="demo\img\credit\mastercard.png" />
+    <Content Include="demo\img\credit\paypal2.png" />
+    <Content Include="demo\img\credit\visa.png" />
+    <Content Include="demo\img\favicon.png" />
+    <Content Include="demo\img\gch-black-logo.png" />
+    <Content Include="demo\img\gch-logo.jpg" />
+    <Content Include="demo\img\gch-white-logo.png" />
+    <Content Include="demo\img\logo\gch-black-logo.png" />
+    <Content Include="demo\img\logo\gch-logo.jpg" />
+    <Content Include="demo\img\logo\gch-white-logo.png" />
+    <Content Include="demo\img\logo\logo-blue.png" />
+    <Content Include="demo\img\logo\logo-mini.png" />
+    <Content Include="demo\img\logo\logo-white.png" />
+    <Content Include="demo\img\logo\logo.png" />
+    <Content Include="demo\img\navbar\blue.jpg" />
+    <Content Include="demo\img\navbar\dark.jpg" />
+    <Content Include="demo\img\navbar\green.jpg" />
+    <Content Include="demo\img\navbar\light.jpg" />
+    <Content Include="demo\img\navbar\orange.jpg" />
+    <Content Include="demo\img\navbar\purple.jpg" />
+    <Content Include="demo\img\navbar\red.jpg" />
+    <Content Include="demo\img\placeholder\placeimg_400_200_nature.jpg" />
+    <Content Include="demo\img\portfolio-1.jpg" />
+    <Content Include="demo\img\portfolio-2.jpg" />
+    <Content Include="demo\img\portfolio-3.jpg" />
+    <Content Include="demo\img\portfolio-4.jpg" />
+    <Content Include="demo\img\portfolio-5.jpg" />
+    <Content Include="demo\img\portfolio-6.jpg" />
+    <Content Include="demo\img\portfolio-7.jpg" />
+    <Content Include="demo\img\portfolio-8.jpg" />
+    <Content Include="demo\img\portfolio-9.jpg" />
+    <Content Include="demo\img\user.jpg" />
+    <Content Include="demo\img\users\1.jpg" />
+    <Content Include="demo\img\users\2.jpg" />
+    <Content Include="demo\img\users\3.jpg" />
+    <Content Include="demo\img\users\4.jpg" />
+    <Content Include="demo\img\users\5.jpg" />
+    <Content Include="demo\img\widget\p1.jpg" />
+    <Content Include="demo\img\widget\p2.jpg" />
+    <Content Include="demo\img\widget\p3.jpg" />
+    <Content Include="demo\img\widget\p4.jpg" />
+    <Content Include="demo\js\alerts.js" />
+    <Content Include="demo\js\calendar.js" />
+    <Content Include="demo\js\carousel.js" />
+    <Content Include="demo\js\chart-amcharts.js" />
+    <Content Include="demo\js\chart-chartist.js" />
+    <Content Include="demo\js\chart-flot.js" />
+    <Content Include="demo\js\chart-knob.js" />
+    <Content Include="demo\js\charts.js" />
+    <Content Include="demo\js\datatables.js" />
+    <Content Include="demo\js\form-advanced.js" />
+    <Content Include="demo\js\form-picker.js" />
+    <Content Include="demo\js\forms.js" />
+    <Content Include="demo\js\layouts.js" />
+    <Content Include="demo\js\range-slider.js" />
+    <Content Include="demo\js\rating.js" />
+    <Content Include="demo\js\session-time-out.js" />
+    <Content Include="demo\js\tables.js" />
+    <Content Include="demo\js\taskboard.js" />
+    <Content Include="demo\js\widget-chart.js" />
+    <Content Include="demo\js\widget-data.js" />
+    <Content Include="demo\js\widget-statistic.js" />
+    <Content Include="demo\js\widgets.js" />
+    <Content Include="demo\lib\bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="demo\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="demo\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="demo\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="demo\lib\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="demo\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="demo\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <Content Include="demo\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="demo\lib\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="demo\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="demo\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <Content Include="demo\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <Content Include="demo\lib\jquery-validation-unobtrusive\LICENSE.txt" />
+    <Content Include="demo\lib\jquery-validation\dist\additional-methods.js" />
+    <Content Include="demo\lib\jquery-validation\dist\additional-methods.min.js" />
+    <Content Include="demo\lib\jquery-validation\dist\jquery.validate.js" />
+    <Content Include="demo\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Include="demo\lib\jquery\dist\jquery.js" />
+    <Content Include="demo\lib\jquery\dist\jquery.min.js" />
+    <Content Include="demo\lib\jquery\LICENSE.txt" />
+    <Content Include="demo\nodemodules\%40fortawesome\fontawesome-free\css\all.min.css" />
+    <Content Include="demo\nodemodules\%40fortawesome\fontawesome-free\webfonts\fa-brands-400.svg" />
+    <Content Include="demo\nodemodules\%40fortawesome\fontawesome-free\webfonts\fa-regular-400.svg" />
+    <Content Include="demo\nodemodules\%40fortawesome\fontawesome-free\webfonts\fa-solid-900.svg" />
+    <Content Include="demo\nodemodules\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="demo\nodemodules\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="demo\nodemodules\datatables.net-bs4\css\dataTables.bootstrap4.min.css" />
+    <Content Include="demo\nodemodules\datatables.net-bs4\js\dataTables.bootstrap4.min.js" />
+    <Content Include="demo\nodemodules\datatables.net\js\jquery.dataTables.min.js" />
+    <Content Include="demo\nodemodules\ethers\abstract-signer.js" />
+    <Content Include="demo\nodemodules\ethers\constants.js" />
+    <Content Include="demo\nodemodules\ethers\contract.js" />
+    <Content Include="demo\nodemodules\ethers\dist\demo\index.html" />
+    <Content Include="demo\nodemodules\ethers\dist\demo\style.css" />
+    <Content Include="demo\nodemodules\ethers\dist\ethers.js" />
+    <Content Include="demo\nodemodules\ethers\dist\ethers.min.js" />
+    <Content Include="demo\nodemodules\ethers\dist\ethers.types.txt" />
+    <Content Include="demo\nodemodules\ethers\dist\shims.js" />
+    <Content Include="demo\nodemodules\ethers\dist\wordlist-es.js" />
+    <Content Include="demo\nodemodules\ethers\dist\wordlist-fr.js" />
+    <Content Include="demo\nodemodules\ethers\dist\wordlist-it.js" />
+    <Content Include="demo\nodemodules\ethers\dist\wordlist-ja.js" />
+    <Content Include="demo\nodemodules\ethers\dist\wordlist-ko.js" />
+    <Content Include="demo\nodemodules\ethers\dist\wordlist-zh.js" />
+    <Content Include="demo\nodemodules\ethers\errors.js" />
+    <Content Include="demo\nodemodules\ethers\ethers.js" />
+    <Content Include="demo\nodemodules\ethers\index.js" />
+    <Content Include="demo\nodemodules\ethers\providers\abstract-provider.js" />
+    <Content Include="demo\nodemodules\ethers\providers\base-provider.js" />
+    <Content Include="demo\nodemodules\ethers\providers\etherscan-provider.js" />
+    <Content Include="demo\nodemodules\ethers\providers\fallback-provider.js" />
+    <Content Include="demo\nodemodules\ethers\providers\index.js" />
+    <Content Include="demo\nodemodules\ethers\providers\infura-provider.js" />
+    <Content Include="demo\nodemodules\ethers\providers\ipc-provider.js" />
+    <Content Include="demo\nodemodules\ethers\providers\json-rpc-provider.js" />
+    <Content Include="demo\nodemodules\ethers\providers\web3-provider.js" />
+    <Content Include="demo\nodemodules\ethers\shims\base64.js" />
+    <Content Include="demo\nodemodules\ethers\shims\empty.js" />
+    <Content Include="demo\nodemodules\ethers\shims\hmac.js" />
+    <Content Include="demo\nodemodules\ethers\shims\index.js" />
+    <Content Include="demo\nodemodules\ethers\shims\pbkdf2.js" />
+    <Content Include="demo\nodemodules\ethers\shims\random-bytes.js" />
+    <Content Include="demo\nodemodules\ethers\shims\shims.js" />
+    <Content Include="demo\nodemodules\ethers\shims\wordlists.js" />
+    <Content Include="demo\nodemodules\ethers\shims\xmlhttprequest.js" />
+    <Content Include="demo\nodemodules\ethers\utils\abi-coder.js" />
+    <Content Include="demo\nodemodules\ethers\utils\address.js" />
+    <Content Include="demo\nodemodules\ethers\utils\base64.js" />
+    <Content Include="demo\nodemodules\ethers\utils\basex.js" />
+    <Content Include="demo\nodemodules\ethers\utils\bignumber.js" />
+    <Content Include="demo\nodemodules\ethers\utils\bytes.js" />
+    <Content Include="demo\nodemodules\ethers\utils\hash.js" />
+    <Content Include="demo\nodemodules\ethers\utils\hdnode.js" />
+    <Content Include="demo\nodemodules\ethers\utils\hmac.js" />
+    <Content Include="demo\nodemodules\ethers\utils\index.js" />
+    <Content Include="demo\nodemodules\ethers\utils\interface.js" />
+    <Content Include="demo\nodemodules\ethers\utils\json-wallet.js" />
+    <Content Include="demo\nodemodules\ethers\utils\keccak256.js" />
+    <Content Include="demo\nodemodules\ethers\utils\networks.js" />
+    <Content Include="demo\nodemodules\ethers\utils\pbkdf2.js" />
+    <Content Include="demo\nodemodules\ethers\utils\properties.js" />
+    <Content Include="demo\nodemodules\ethers\utils\random-bytes.js" />
+    <Content Include="demo\nodemodules\ethers\utils\rlp.js" />
+    <Content Include="demo\nodemodules\ethers\utils\secp256k1.js" />
+    <Content Include="demo\nodemodules\ethers\utils\secret-storage.js" />
+    <Content Include="demo\nodemodules\ethers\utils\sha2.js" />
+    <Content Include="demo\nodemodules\ethers\utils\shims.js" />
+    <Content Include="demo\nodemodules\ethers\utils\signing-key.js" />
+    <Content Include="demo\nodemodules\ethers\utils\solidity.js" />
+    <Content Include="demo\nodemodules\ethers\utils\transaction.js" />
+    <Content Include="demo\nodemodules\ethers\utils\units.js" />
+    <Content Include="demo\nodemodules\ethers\utils\utf8.js" />
+    <Content Include="demo\nodemodules\ethers\utils\web.js" />
+    <Content Include="demo\nodemodules\ethers\utils\wordlist.js" />
+    <Content Include="demo\nodemodules\ethers\wallet.js" />
+    <Content Include="demo\nodemodules\ethers\wordlists\index.js" />
+    <Content Include="demo\nodemodules\ethers\wordlists\lang-en.js" />
+    <Content Include="demo\nodemodules\ethers\wordlists\lang-es.js" />
+    <Content Include="demo\nodemodules\ethers\wordlists\lang-fr.js" />
+    <Content Include="demo\nodemodules\ethers\wordlists\lang-it.js" />
+    <Content Include="demo\nodemodules\ethers\wordlists\lang-ja.js" />
+    <Content Include="demo\nodemodules\ethers\wordlists\lang-ko.js" />
+    <Content Include="demo\nodemodules\ethers\wordlists\lang-zh.js" />
+    <Content Include="demo\nodemodules\ethers\_version.js" />
+    <Content Include="demo\nodemodules\icon-kit\dist\css\iconkit.min.css" />
+    <Content Include="demo\nodemodules\icon-kit\dist\fonts\iconkit.svg" />
+    <Content Include="demo\nodemodules\ionicons\dist\css\ionicons.min.css" />
+    <Content Include="demo\nodemodules\ionicons\dist\fonts\ioniconse9f8.svg" />
+    <Content Include="demo\nodemodules\perfect-scrollbar\css\perfect-scrollbar.css" />
+    <Content Include="demo\nodemodules\perfect-scrollbar\dist\perfect-scrollbar.min.js" />
+    <Content Include="demo\nodemodules\popper.js\dist\umd\popper.min.js" />
+    <Content Include="demo\nodemodules\screenfull\dist\screenfull.js" />
+    <Content Include="demo\src\img\brand-white.svg" />
+    <Content Include="demo\src\img\brand.svg" />
+    <Content Include="demo\src\js\vendor\jquery-3.3.1.min.js" />
+    <Content Include="demo\src\js\vendor\modernizr-2.8.3.min.js" />
+    <Content Include="demo\vendor\jquery-3.2.1.min.js" />
+    <Content Include="demo\vendor\jquery-ui.min.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="demo\.DS_Store" />
+    <Content Include="demo\img\.DS_Store" />
+    <Content Include="demo\img\logo-mini.psd" />
+    <Content Include="demo\img\logo\logo-blue.psd" />
+    <Content Include="demo\img\logo\logo-mini.psd" />
+    <Content Include="demo\img\logo\logo-white.psd" />
+    <Content Include="demo\img\logo\logo.psd" />
+    <Content Include="demo\nodemodules\%40fortawesome\fontawesome-free\webfonts\fa-brands-400.eot" />
+    <Content Include="demo\nodemodules\%40fortawesome\fontawesome-free\webfonts\fa-brands-400.ttf" />
+    <Content Include="demo\nodemodules\%40fortawesome\fontawesome-free\webfonts\fa-brands-400.woff" />
+    <Content Include="demo\nodemodules\%40fortawesome\fontawesome-free\webfonts\fa-brands-400.woff2" />
+    <Content Include="demo\nodemodules\%40fortawesome\fontawesome-free\webfonts\fa-brands-400d41d.eot" />
+    <Content Include="demo\nodemodules\%40fortawesome\fontawesome-free\webfonts\fa-regular-400.eot" />
+    <Content Include="demo\nodemodules\%40fortawesome\fontawesome-free\webfonts\fa-regular-400.ttf" />
+    <Content Include="demo\nodemodules\%40fortawesome\fontawesome-free\webfonts\fa-regular-400.woff" />
+    <Content Include="demo\nodemodules\%40fortawesome\fontawesome-free\webfonts\fa-regular-400.woff2" />
+    <Content Include="demo\nodemodules\%40fortawesome\fontawesome-free\webfonts\fa-regular-400d41d.eot" />
+    <Content Include="demo\nodemodules\%40fortawesome\fontawesome-free\webfonts\fa-solid-900.eot" />
+    <Content Include="demo\nodemodules\%40fortawesome\fontawesome-free\webfonts\fa-solid-900.ttf" />
+    <Content Include="demo\nodemodules\%40fortawesome\fontawesome-free\webfonts\fa-solid-900.woff" />
+    <Content Include="demo\nodemodules\%40fortawesome\fontawesome-free\webfonts\fa-solid-900.woff2" />
+    <Content Include="demo\nodemodules\%40fortawesome\fontawesome-free\webfonts\fa-solid-900d41d.eot" />
+    <Content Include="demo\nodemodules\ethers\CODE_OF_CONDUCT.md" />
+    <Content Include="demo\nodemodules\ethers\dist\ethers.min.js.map" />
+    <Content Include="demo\nodemodules\ethers\LICENSE" />
+    <Content Include="demo\nodemodules\ethers\package.json" />
+    <Content Include="demo\nodemodules\ethers\README.md" />
+    <Content Include="demo\nodemodules\icon-kit\dist\fonts\iconkit.eot" />
+    <Content Include="demo\nodemodules\icon-kit\dist\fonts\iconkit.ttf" />
+    <Content Include="demo\nodemodules\icon-kit\dist\fonts\iconkit.woff" />
+    <Content Include="demo\nodemodules\ionicons\dist\fonts\ioniconse9f8.eot" />
+    <Content Include="demo\nodemodules\ionicons\dist\fonts\ioniconse9f8.ttf" />
+    <Content Include="demo\nodemodules\ionicons\dist\fonts\ioniconse9f8.woff" />
+    <Content Include="demo\nodemodules\ionicons\dist\fonts\ioniconse9f8.woff2" />
+    <Content Include="demo\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <Content Include="demo\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="demo\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <Content Include="demo\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="demo\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="demo\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="demo\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <Content Include="demo\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="demo\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <Content Include="demo\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <Content Include="demo\lib\bootstrap\LICENSE" />
+    <Content Include="demo\lib\jquery-validation\LICENSE.md" />
+    <Content Include="demo\lib\jquery\dist\jquery.min.map" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="demo\SPA\inline.gif" />
+    <Content Include="demo\SPA\loading.gif" />
+    <Content Include="demo\SPA\readme.txt" />
+    <Content Include="demo\SPA\sm-loader.gif" />
+    <Content Include="demo\SPA\toufiqElahySPA.css" />
+    <Content Include="demo\SPA\toufiqElahySPA.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Account\Login - Copy.cshtml" />
+    <Content Include="Views\Lottery\Index.cshtml" />
+    <Content Include="Views\Lottery\SetWinner.cshtml" />
+    <Content Include="Views\Lottery\TicketsStatus.cshtml" />
+    <Content Include="Views\Lottery\UserTickets.cshtml" />
+    <Content Include="Views\Lottery\Winners.cshtml" />
+    <Content Include="Views\Shared\_SideMenu.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="demo\nodemodules\ethers\abstract-signer.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\constants.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\contract.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\errors.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\ethers.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\index.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\providers\abstract-provider.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\providers\base-provider.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\providers\etherscan-provider.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\providers\fallback-provider.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\providers\index.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\providers\infura-provider.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\providers\ipc-provider.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\providers\json-rpc-provider.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\providers\web3-provider.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\thirdparty.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\abi-coder.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\address.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\base64.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\basex.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\bignumber.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\bytes.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\hash.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\hdnode.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\hmac.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\index.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\interface.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\json-wallet.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\keccak256.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\networks.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\pbkdf2.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\properties.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\random-bytes.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\rlp.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\secp256k1.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\secret-storage.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\sha2.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\shims.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\signing-key.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\solidity.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\transaction.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\units.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\utf8.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\web.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\utils\wordlist.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\wallet.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\wordlists\index.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\wordlists\lang-en.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\wordlists\lang-es.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\wordlists\lang-fr.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\wordlists\lang-it.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\wordlists\lang-ja.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\wordlists\lang-ko.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\wordlists\lang-zh.d.ts" />
+    <TypeScriptCompile Include="demo\nodemodules\ethers\_version.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7026</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44353/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
