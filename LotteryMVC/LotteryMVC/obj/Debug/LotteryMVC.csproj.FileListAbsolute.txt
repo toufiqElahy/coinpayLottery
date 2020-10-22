@@ -226,3 +226,6 @@ C:\Users\anonymous\source\repos\coinpayLottery\LotteryMVC\LotteryMVC\obj\Debug\L
 C:\Users\anonymous\source\repos\coinpayLottery\LotteryMVC\LotteryMVC\obj\Debug\LotteryMVC.csproj.CopyComplete
 C:\Users\anonymous\source\repos\coinpayLottery\LotteryMVC\LotteryMVC\obj\Debug\LotteryMVC.dll
 C:\Users\anonymous\source\repos\coinpayLottery\LotteryMVC\LotteryMVC\obj\Debug\LotteryMVC.pdb
+C:\Users\anonymous\source\repos\coinpayLottery\LotteryMVC\LotteryMVC\bin\WebActivator.dll
+C:\Users\anonymous\source\repos\coinpayLottery\LotteryMVC\LotteryMVC\bin\Swashbuckle.Core.dll
+C:\Users\anonymous\source\repos\coinpayLottery\LotteryMVC\LotteryMVC\bin\WebActivatorEx.dll

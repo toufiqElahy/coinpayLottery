@@ -41,6 +41,8 @@ namespace LotteryMVC.Controllers
         {
             return View(LotteryModel._userTicket.Where(x => x.Email == User.Identity.Name).ToList());
         }
+
+
         public ActionResult SetWinner()
         {
             return View();
