@@ -6,7 +6,7 @@
     <section id="about">
         <div class="container">
             <div class="">
-                <div class="col-lg-8 mx-auto">
+                <div class="col-lg-10 mx-auto">
                     <h1>Buy A Ticket</h1>
                     <p class="lead">Each ticket is only 5 SCC. At current prices, that's ~$<span id="ticketPrice"></span>.</p>
                     <div id="divContainer" style="text-align:center;">
@@ -15,7 +15,7 @@
                             if (item.IsLocked == false)
                             {
                                 string c = (item.Number < 10) ? "0" : "";
-                                <a href="@Url.Action("BuyTicket",new { number=item.Number})" class="btn btn-primary m-2">Tkt# @(c+ item.Number)</a><span>Available: @item.Available</span>
+                                <a href="@Url.Action("BuyTicket",new { number=item.Number})" class="btn btn-primary m-2">Tkt# @(c+ item.Number) <span>[@item.Available]</span></a>
 
                             }
 

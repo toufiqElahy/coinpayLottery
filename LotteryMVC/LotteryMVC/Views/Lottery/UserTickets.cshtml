@@ -9,11 +9,12 @@
                 <div class="col-lg-8 mx-auto">
                     <h1>Ticket List</h1>
                     <p class="lead">Tickets Bought By User:.</p>
-                    <div id="divContainer" style="text-align:center;">
+                    <div id="divContainer" style="text-align:left;">
                         @foreach (var item in Model)
                         {
                             string c = (item.TicketNumber < 10) ? "0" : "";
-                            <a href="#" class="btn btn-primary m-2" id="buyTicket@(item.TicketNumber)" type="button">Tkt# @(c+ item.TicketNumber)</a><span>Total Bought: @item.TicketCount</span>
+                        <span><a href="#" class="btn btn-primary m-2" id="buyTicket@(item.TicketNumber)" type="button">Tkt# @(c+ item.TicketNumber)</a>Total Bought: @item.TicketCount</span>
+                        <br />
                         }
                     </div>
                 </div>
