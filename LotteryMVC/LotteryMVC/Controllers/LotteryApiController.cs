@@ -66,6 +66,11 @@ namespace LotteryMVC.Controllers
         {
             return LotteryModel._winnerTicketAtEnd;
         }
+        [Route("GetAdminInfo")]
+        public AdminInfo GetAdminInfo()
+        {
+            return new AdminInfo {CollectedFundAtEnd=LotteryModel._collectedFundAtEnd,TotalWinningTicketSoldAtEnd=LotteryModel._totalWinningTicketSoldAtEnd };
+        }
         [Route("GetTicketsStatus")]
         public List<UserTicket> GetTicketsStatus()
         {

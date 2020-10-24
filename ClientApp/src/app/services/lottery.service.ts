@@ -5,6 +5,7 @@ import { HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Ticket } from '../models/ticket';
 import { UserTicket } from '../models/user-ticket';
+import { Admin } from '../models/admin';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,7 @@ export class LotteryService {
   url = 'https://localhost:44353/LotteryApi';
   constructor(private http: HttpClient) { }
   getAllTicket(): Observable<Ticket[]> {
+   
     return this.http.get<Ticket[]>(this.url + '/GetTickets');
   }
 
@@ -25,6 +27,19 @@ export class LotteryService {
   getUserTickets(): Observable<UserTicket[]> {
     return this.http.get<UserTicket[]>(this.url + '/GetUserTickets');
   }
+
+  getTicketsStatus(): Observable<UserTicket[]> {
+    return this.http.get<UserTicket[]>(this.url + '/GetTicketsStatus');
+  }
+
+  getWinners(): Observable<UserTicket[]> {
+    return this.http.get<UserTicket[]>(this.url + '/GetWinners');
+  }
+
+  getAdminInfo(): Observable<Admin> {
+    return this.http.get<Admin>(this.url + '/GetAdminInfo');
+  }
+
 
   createTicket(Ticket: Ticket): Observable<Ticket> {
     const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };

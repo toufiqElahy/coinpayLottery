@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FormBuilder, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { LotteryService } from '../../services/lottery.service';
 import { Ticket } from '../../models/ticket';
@@ -12,19 +11,17 @@ import { Ticket } from '../../models/ticket';
 })
 export class TicketComponent implements OnInit {
 
-  dataSaved = false;
-  employeeForm: any;
+  
   allTickets: Observable<Ticket[]>;
-  employeeIdUpdate = null;
-  massage = null;
+
 
   constructor(private service: LotteryService) { }
 
   ngOnInit() {
    
-    this.loadAllEmployees();
+    this.load();
   }
-  loadAllEmployees() {
+  load() {
     this.allTickets = this.service.getAllTicket();
   }
 

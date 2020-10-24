@@ -1,0 +1,15 @@
+<div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h1>Winner List</h1>
+                    <p class="lead">User List Of Winnig Ticket Number: [{{winningticketNumber}}] : </p>
+                    <p class="lead">Total Collected Fund: {{adminInfo.CollectedFundAtEnd}} SCC </p>
+                    <p class="lead"> Tkt# {{winningticketNumber}} Sold(In Total): {{adminInfo.TotalWinningTicketSoldAtEnd}} </p>
+                    <div *ngFor="let item of allUserTickets | async" style="text-align:center;">
+                        
+                           <span>User: <b>{{item.Email}}</b>  Bought: {{item.TicketCount}} tickets. [Won: {{item.TicketCount*(adminInfo.CollectedFundAtEnd/adminInfo.TotalWinningTicketSoldAtEnd)}} SCC]</span><br />
+                        
+                    </div>
+                </div>
+            </div>
+        </div>

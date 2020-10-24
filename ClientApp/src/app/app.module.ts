@@ -14,6 +14,8 @@ import { TicketComponent } from './components/ticket/ticket.component';
 import { HeaderComponent } from './components/pages/header/header.component';
 import { SidebarComponent } from './components/pages/sidebar/sidebar.component';
 import { UserTicketComponent } from './components/user-ticket/user-ticket.component';
+import { TicketsStatusComponent } from './components/tickets-status/tickets-status.component';
+import { WinnersComponent } from './components/winners/winners.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { UserTicketComponent } from './components/user-ticket/user-ticket.compon
     TicketComponent,
     HeaderComponent,
     SidebarComponent,
-    UserTicketComponent
+    UserTicketComponent,
+    TicketsStatusComponent,
+    WinnersComponent
   ],
   imports: [
     BrowserModule,

@@ -9,7 +9,7 @@
                             <div *ngFor="let item of allTickets | async">
 
                       
-                                <a href="#" class="btn btn-primary m-2" (click)="loadTicketsById(item.Number)">Tkt# {{item.Number < 10 ? "0" : ""}}{{item.Number}} <span>[{{item.Available}}]</span></a>
+                                <a class="btn btn-primary m-2" (click)="loadTicketsById(item.Number)">Tkt# {{item.Number < 10 ? "0" : ""}}{{item.Number}} <span>[{{item.Available}}]</span></a>
                 
                 
                     </div>

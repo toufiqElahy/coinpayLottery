@@ -70,4 +70,9 @@ namespace LotteryMVC.Models
 		}
 
 	}
+	public class AdminInfo
+    {
+		public int CollectedFundAtEnd { get; set; }
+		public int TotalWinningTicketSoldAtEnd { get; set; }
+	}
 }
