@@ -14,7 +14,7 @@ namespace LotteryMVC.Controllers
         [Route("GetTickets")]
         public List<Ticket> GetTickets()
         {
-            return LotteryModel._tickets;
+            return LotteryModel._tickets.Where(x=>x.IsLocked==false).ToList();
         }
         [Route("GetBuyTicket")]
         public List<Ticket> GetBuyTicket(int number)
@@ -40,7 +40,7 @@ namespace LotteryMVC.Controllers
                 }
                 LotteryModel.LockUnlock(ticket);
             }
-            return LotteryModel._tickets;
+            return LotteryModel._tickets.Where(x => x.IsLocked == false).ToList();
         }
         [Route("GetUserTickets")]
         public List<UserTicket> GetUserTickets()

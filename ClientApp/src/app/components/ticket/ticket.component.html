@@ -1,0 +1,24 @@
+
+        <div class="container">
+            <div class="">
+                <div class="col-lg-10 mx-auto">
+                    <h1>Buy A Ticket</h1>
+                    <p class="lead">Each ticket is only 5 SCC. At current prices, that's ~$<span id="ticketPrice"></span>.</p>
+                    <div class="" style="text-align:center;">
+                        <div class="row">
+                            <div *ngFor="let item of allTickets | async">
+
+                      
+                                <a href="#" class="btn btn-primary m-2" (click)="loadTicketsById(item.Number)">Tkt# {{item.Number < 10 ? "0" : ""}}{{item.Number}} <span>[{{item.Available}}]</span></a>
+                
+                
+                    </div>
+                        </div>
+                      
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    

@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { FormBuilder, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { TicketService } from '../ticket.service';
-import { Ticket } from '../ticket';
+import { LotteryService } from '../../services/lottery.service';
+import { Ticket } from '../../models/ticket';
 
 @Component({
   selector: 'app-ticket',
@@ -18,18 +18,18 @@ export class TicketComponent implements OnInit {
   employeeIdUpdate = null;
   massage = null;
 
-  constructor(private ticketService: TicketService) { }
+  constructor(private service: LotteryService) { }
 
   ngOnInit() {
    
     this.loadAllEmployees();
   }
   loadAllEmployees() {
-    this.allTickets = this.ticketService.getAllTicket();
+    this.allTickets = this.service.getAllTicket();
   }
 
   loadTicketsById(number: number) {
-    this.allTickets = this.ticketService.getTicketsById(number);
+    this.allTickets = this.service.getTicketsById(number);
     
 
   }

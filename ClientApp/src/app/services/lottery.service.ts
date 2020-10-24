@@ -3,12 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
-import { Ticket } from './ticket';
+import { Ticket } from '../models/ticket';
+import { UserTicket } from '../models/user-ticket';
 
 @Injectable({
   providedIn: 'root'
 })
-export class TicketService {
+export class LotteryService {
 
   url = 'https://localhost:44353/LotteryApi';
   constructor(private http: HttpClient) { }
@@ -19,6 +20,12 @@ export class TicketService {
   getTicketsById(TicketId: number): Observable<Ticket[]> {
     return this.http.get<Ticket[]>(this.url + '/GetBuyTicket?number=' + TicketId);
   }
+
+
+  getUserTickets(): Observable<UserTicket[]> {
+    return this.http.get<UserTicket[]>(this.url + '/GetUserTickets');
+  }
+
   createTicket(Ticket: Ticket): Observable<Ticket> {
     const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
     return this.http.post<Ticket>(this.url + '/InsertTicketDetails/', Ticket, httpOptions);
