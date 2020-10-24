@@ -8,6 +8,7 @@ using System.Web.Http;
 namespace LotteryMVC.Controllers
 {
     //[Authorize]
+    [RoutePrefix("LotteryApi")]
     public class LotteryApiController : ApiController
     {
         [Route("GetTickets")]

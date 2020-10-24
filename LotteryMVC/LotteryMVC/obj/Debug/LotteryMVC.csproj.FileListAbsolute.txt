@@ -229,3 +229,6 @@ C:\Users\anonymous\source\repos\coinpayLottery\LotteryMVC\LotteryMVC\obj\Debug\L
 C:\Users\anonymous\source\repos\coinpayLottery\LotteryMVC\LotteryMVC\bin\WebActivator.dll
 C:\Users\anonymous\source\repos\coinpayLottery\LotteryMVC\LotteryMVC\bin\Swashbuckle.Core.dll
 C:\Users\anonymous\source\repos\coinpayLottery\LotteryMVC\LotteryMVC\bin\WebActivatorEx.dll
+C:\Users\anonymous\source\repos\coinpayLottery\LotteryMVC\LotteryMVC\bin\System.Web.Cors.dll
+C:\Users\anonymous\source\repos\coinpayLottery\LotteryMVC\LotteryMVC\bin\System.Web.Http.Cors.dll
+C:\Users\anonymous\source\repos\coinpayLottery\LotteryMVC\LotteryMVC\bin\System.Web.Http.Cors.xml
