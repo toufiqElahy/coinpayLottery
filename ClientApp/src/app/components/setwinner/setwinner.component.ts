@@ -14,7 +14,6 @@ import { UserTicket } from '../../models/user-ticket';
 })
 export class SetwinnerComponent implements OnInit {
 
- allUserTickets: Observable<UserTicket[]>;
 ticketForm:any;
  message = null;
 
@@ -28,11 +27,8 @@ ticketForm:any;
 
    
 
-    this.load();
   }
-  load(){
-this.allUserTickets= this.service.getUserTickets();
-  }
+ 
 
   onFormSubmit() {
     //this.dataSaved = false;

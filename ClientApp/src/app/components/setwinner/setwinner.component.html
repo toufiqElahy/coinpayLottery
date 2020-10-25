@@ -25,11 +25,7 @@
 <p style="color:rgb(0, 128, 0);font-size:20px;font-weight:bold" Class="success">
                     {{message}}
                   </p>
-                    <div *ngFor="let item of allUserTickets | async" style="text-align:center;">
-                        
-                           <span>User: <b>{{item.Email}}</b>  Bought: {{item.TicketCount}} tickets. [Won: {{item.TicketCount*(adminInfo.CollectedFundAtEnd/adminInfo.TotalWinningTicketSoldAtEnd)}} SCC]</span><br />
-                        
-                    </div>
+                   
 
                 </div>
 
