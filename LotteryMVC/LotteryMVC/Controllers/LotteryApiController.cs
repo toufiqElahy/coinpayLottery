@@ -51,15 +51,15 @@ namespace LotteryMVC.Controllers
 
 
         [Route("SetWinner")]
-        public List<UserTicket> SetWinner(int luckyNumber)
+        public string SetWinner(int Number)
         {
-            var ticket = LotteryModel._tickets.First(x => x.Number == luckyNumber);
+            var ticket = LotteryModel._tickets.First(x => x.Number == Number);
             LotteryModel._totalWinningTicketSoldAtEnd = 100 - ticket.Available;
             //get winners
-            LotteryModel._winnerTicketAtEnd = LotteryModel._userTicket.Where(x => x.TicketNumber == luckyNumber).ToList();
+            LotteryModel._winnerTicketAtEnd = LotteryModel._userTicket.Where(x => x.TicketNumber == Number).ToList();
             //reset
             LotteryModel.Refresh();
-            return LotteryModel._winnerTicketAtEnd;
+            return "Success..";
         }
         [Route("GetWinners")]
         public List<UserTicket> GetWinners()

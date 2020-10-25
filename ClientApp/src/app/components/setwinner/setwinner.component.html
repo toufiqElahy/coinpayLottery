@@ -1,0 +1,43 @@
+
+
+<div class="container-fluid">
+    
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card" style="min-height: 484px;">
+                <div class="card-header"><h3>Set Lottery Winner</h3></div>
+
+                <div class="card-body">
+
+                    <form [formGroup]="ticketForm" (ngSubmit)="onFormSubmit(ticketForm.value)">
+                        <div style="color:red"></div>
+                      
+                        <div class="form-group">
+                            <label for="Number">Set Ticket Number(1-99):</label><br>
+                            <input type="number" class="form-control" formControlName="Number" placeholder="Set Winner Ticket Number">
+                            <span *ngIf="!ticketForm.get('Number').value && ticketForm.get('Number').touched"></span>
+                        </div>
+
+                  
+                        <button type="submit" class="btn btn-primary mr-2" [disabled]="!ticketForm.valid">Submit</button>
+                    </form>
+<p style="color:rgb(0, 128, 0);font-size:20px;font-weight:bold" Class="success">
+                    {{message}}
+                  </p>
+                    <div *ngFor="let item of allUserTickets | async" style="text-align:center;">
+                        
+                           <span>User: <b>{{item.Email}}</b>  Bought: {{item.TicketCount}} tickets. [Won: {{item.TicketCount*(adminInfo.CollectedFundAtEnd/adminInfo.TotalWinningTicketSoldAtEnd)}} SCC]</span><br />
+                        
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+

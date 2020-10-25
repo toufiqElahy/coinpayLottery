@@ -16,6 +16,7 @@ import { SidebarComponent } from './components/pages/sidebar/sidebar.component';
 import { UserTicketComponent } from './components/user-ticket/user-ticket.component';
 import { TicketsStatusComponent } from './components/tickets-status/tickets-status.component';
 import { WinnersComponent } from './components/winners/winners.component';
+import { SetwinnerComponent } from './components/setwinner/setwinner.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { WinnersComponent } from './components/winners/winners.component';
     SidebarComponent,
     UserTicketComponent,
     TicketsStatusComponent,
-    WinnersComponent
+    WinnersComponent,
+    SetwinnerComponent
   ],
   imports: [
     BrowserModule,

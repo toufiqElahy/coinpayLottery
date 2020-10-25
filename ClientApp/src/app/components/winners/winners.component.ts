@@ -26,7 +26,7 @@ winningticketNumber:string;
   load() {
     this.allUserTickets = this.service.getWinners();
     this.service.getAdminInfo().subscribe(admin => {
-        this.adminInfo = admin as Admin[];
+        this.adminInfo = admin as Admin;
         });
     console.log(this.adminInfo);
     this.allUserTickets.subscribe(userTicket => {

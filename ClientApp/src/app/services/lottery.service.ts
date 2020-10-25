@@ -40,15 +40,23 @@ export class LotteryService {
     return this.http.get<Admin>(this.url + '/GetAdminInfo');
   }
 
-
-  createTicket(Ticket: Ticket): Observable<Ticket> {
-    const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
-    return this.http.post<Ticket>(this.url + '/InsertTicketDetails/', Ticket, httpOptions);
+setWinner(TicketId: number): Observable<string> {
+   const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
+    return this.http.post<string>(this.url + '/SetWinner?Number='+TicketId,null,httpOptions);
   }
 
+  setWinner1(): Observable<UserTicket[]> {
+    //console.log(Ticket.Number)
+    const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
+    return this.http.get<UserTicket[]>(this.url + '/SetWinner');
+  }
+
+
+////////
   updateTicket(Ticket: Ticket): Observable<Ticket> {
     const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
-    return this.http.put<Ticket>(this.url + '/UpdateTicketDetails/', Ticket, httpOptions);
+    console.log(Ticket);
+    return this.http.put<Ticket>(this.url + '/UpdateTicketDetails?number='+Ticket.Number,Ticket, httpOptions);
   }
 
   deleteTicketById(Ticketid: string): Observable<number> {
